@@ -6,10 +6,10 @@ const Header = ({ children }: { children: React.ReactNode }) => {
       <div className="flex justify-between section-container">
         <a href="#home" className="link">
           <Image
-            src="/logo.svg"
-            alt="Logo - Ayush Singh"
-            width={22}
-            height={22}
+            src="/bryo.svg"
+            alt="Logo - BRYO restaurant"
+            width={48}
+            height={48}
           />
         </a>
         <div className="outer-menu relative">

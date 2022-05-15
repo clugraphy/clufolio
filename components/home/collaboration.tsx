@@ -79,10 +79,12 @@ const CollaborationSection = () => {
   );
 
   const renderTitle = () => (
-    <h1 ref={quoteRef} className={COLLABORATION_STYLE.TITLE}>
-      Interested in <span className="text-strong font-bold">Collaboration</span>
-      ?
-    </h1>
+    <div className="text-black">
+      <h1 ref={quoteRef} className={COLLABORATION_STYLE.TITLE}>
+        Interested in <span className="text-strong font-bold text-red-300">Collaboration</span>
+        ?
+      </h1>
+    </div>
   );
 
   return (

@@ -11,14 +11,15 @@ import Menu from "@/components/common/menu";
 import ProgressIndicator from "@/components/common/progress-indicator";
 import Cursor from "@/components/common/cursor";
 import HeroSection from "@/components/home/hero";
-import ProjectsSection from "@/components/home/projects";
+
 import QuoteSection from "@/components/home/quote";
-import SkillsSection from "@/components/home/skills";
 import CollaborationSection from "@/components/home/collaboration";
 import Footer from "@/components/common/footer";
 import TimelineSection from "@/components/home/timeline";
 import Scripts from "@/components/common/scripts";
 import AboutSection from "@/components/home/about";
+import GridMenuSection from "@/components/home/grid_menu";
+import Image from "next/image";
 
 const DEBOUNCE_TIME = 100;
 
@@ -58,7 +59,7 @@ export default function Home() {
   }, [timer]);
 
   const renderBackdrop = (): React.ReactNode => (
-    <div className="fixed top-0 left-0 h-screen w-screen bg-gray-900 -z-1"></div>
+    <div className="fixed top-0 left-0 h-screen w-screen bg-white -z-1"></div>
   );
 
   return (
@@ -75,12 +76,11 @@ export default function Home() {
         <main className="flex-col flex">
           {renderBackdrop()}
           <HeroSection />
-          <AboutSection />
-          <ProjectsSection isDesktop={isDesktop} />
-          <QuoteSection />
-          <SkillsSection />
-          <TimelineSection isDesktop={isDesktop} />
           <CollaborationSection />
+          <QuoteSection />
+          <GridMenuSection />
+          {/* <TimelineSection isDesktop={isDesktop} /> */}
+          <AboutSection />
           <Footer />
         </main>
         <Scripts />

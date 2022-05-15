@@ -75,26 +75,26 @@ const HeroSection = React.memo(() => {
 
   const renderHeroContent = (): React.ReactNode => (
     <div className={HERO_STYLES.CONTENT}>
-      <div className="md:mb-5 mb-2">
-        <p className="text-4xl seq">Hello 👋🏻</p>
-        <h1 className="text-3xl seq">I am Ayush Singh</h1>
+      <div className="md:mb-5 mb-2 text-black">
+        <p className="text-4xl seq">BRYO appetit 👋🏻</p>
+        <h1 className="text-3xl seq">Pizza buna, facuta de nepalezi</h1>
       </div>
-      <p className="mb-5">
+      <p className="mb-5 text-black">
         <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
       </p>
-      <div className="flex seq mb-5">{renderSocialLinks()}</div>
-      <div className="flex seq">
+      <div className="flex seq mb-5 text-black">{renderSocialLinks()}</div>
+      <div className="flex seq text-black">
         <Button
           classes="mr-3"
           type={ButtonTypes.OUTLINE}
-          name="Resume"
+          name="Menu"
           target="_blank"
           rel="noreferrer"
-          href="/Ayush_Resume.pdf"
+          href="/bryo_food_menu_2022.pdf"
         ></Button>
         <Button
           classes="ml-3"
-          type={ButtonTypes.PRIMARY}
+          type={ButtonTypes.OUTLINE}
           name="Let's Talk"
           href={`mailto: ${EMAIL}`}
         ></Button>

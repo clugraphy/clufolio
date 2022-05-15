@@ -27,10 +27,10 @@ const Footer = () => {
         <Button
           classes="mr-3"
           type={ButtonTypes.OUTLINE}
-          name="Resume"
+          name="Menu"
           target="_blank"
           rel="noreferrer"
-          href="/Ayush_Resume.pdf"
+          href="/bryo_food_menu_2022.pdf"
         ></Button>
         <Button
           classes="ml-3"
@@ -40,12 +40,12 @@ const Footer = () => {
         ></Button>
       </div>
       <p className="text-center text-sm sm:text-base mt-8">
-        Designed and Developed with ❤️ by Ayush
+        Designed and Developed with ❤️ by C Everything Studio
       </p>
     </>
   );
 
-  const { ref: footerRef } = MENULINKS[4];
+  const { ref: footerRef } = MENULINKS[3];
 
   return (
     <footer className="w-full relative select-none bg-cover" id={footerRef}>
