@@ -81,7 +81,7 @@ const CollaborationSection = () => {
   const renderTitle = () => (
     <div className="text-black">
       <h1 ref={quoteRef} className={COLLABORATION_STYLE.TITLE}>
-        Interested in <span className="text-strong font-bold text-red-300">Collaboration</span>
+        Iti este <span className="text-strong font-bold text-red-300">foame?</span>
         ?
       </h1>
     </div>
@@ -90,14 +90,14 @@ const CollaborationSection = () => {
   return (
     <section className={COLLABORATION_STYLE.SECTION} ref={targetSection}>
       {renderSlidingText(
-        " User Interface Design  User Experience Design ",
+        "Vrei sa gusti? ",
         "ui-left"
       )}
 
       {renderTitle()}
 
       {renderSlidingText(
-        " Frontend Development  Motion Graphics ",
+        " Mai, tu vrei sa gusti ?  Mai, tu vrei sa gusti ?   Mai, tu vrei sa gusti ?  ",
         "mt-6 md:mt-8 ui-right"
       )}
     </section>

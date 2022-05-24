@@ -1,10 +1,8 @@
 import { METADATA } from "../constants";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 import Layout from "@/components/common/layout";
 import Header from "@/components/common/header";
 import Menu from "@/components/common/menu";
@@ -15,11 +13,11 @@ import HeroSection from "@/components/home/hero";
 import QuoteSection from "@/components/home/quote";
 import CollaborationSection from "@/components/home/collaboration";
 import Footer from "@/components/common/footer";
-import TimelineSection from "@/components/home/timeline";
 import Scripts from "@/components/common/scripts";
 import AboutSection from "@/components/home/about";
 import GridMenuSection from "@/components/home/grid_menu";
 import Image from "next/image";
+import FancyMenu from "@/components/home/fancy_menu";
 
 const DEBOUNCE_TIME = 100;
 
@@ -56,10 +54,11 @@ export default function Home() {
     window.addEventListener("resize", debouncedDimensionCalculator);
     return () =>
       window.removeEventListener("resize", debouncedDimensionCalculator);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timer]);
 
   const renderBackdrop = (): React.ReactNode => (
-    <div className="fixed top-0 left-0 h-screen w-screen bg-white -z-1"></div>
+    <div className="fixed top-0 left-0 h-screen w-screen bg-blue-300 -z-1"></div>
   );
 
   return (
@@ -76,10 +75,11 @@ export default function Home() {
         <main className="flex-col flex">
           {renderBackdrop()}
           <HeroSection />
+          <FancyMenu />
           <CollaborationSection />
-          <QuoteSection />
           <GridMenuSection />
           {/* <TimelineSection isDesktop={isDesktop} /> */}
+          <QuoteSection />
           <AboutSection />
           <Footer />
         </main>

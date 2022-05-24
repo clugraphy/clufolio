@@ -1,7 +1,13 @@
 import * as React from "react";
+import { gsap, Linear } from "gsap";
+import { useEffect } from "react";
+
+
 
 const HeroImage = () => ((
+
   <svg
+    id="svgRotate"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 912.11 910.6"

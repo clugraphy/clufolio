@@ -23,8 +23,13 @@
 }
 
 body {
-  @apply bg-gray-900 text-white overflow-x-hidden;
+  @apply bg-gray-900 text-black overflow-x-hidden;
   cursor: none;
+}
+
+canvas {
+  height: 100vh;
+  overflow: hidden;
 }
 
 html {
@@ -188,8 +193,8 @@ input[type="checkbox"] {
               90deg,
               #ffffff 0%,
               #ffffff 50%,
-              #6dd5ed 51%,
-              #2193b0 100%
+              #6ded6d 51%,
+              #39b021 100%
             );
             background-size: 200% 100%;
             -webkit-background-clip: text;
@@ -213,7 +218,7 @@ input[type="checkbox"] {
     transform-origin: left;
     will-change: transform;
     transform: scaleX(0);
-    @apply w-full bg-white;
+    @apply w-full bg-yellow-400;
   }
 }
 
@@ -228,8 +233,8 @@ input[type="checkbox"] {
     90deg,
     #ffffff 0%,
     #ffffff 50%,
-    #6dd5ed 51%,
-    #2193b0 100%
+    #95ed6d 51%,
+    #51cf20 100%
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -243,6 +248,15 @@ input[type="checkbox"] {
 .skill {
   padding-right: 1.25rem !important;
   padding-bottom: 1.25rem !important;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
 }
 
 footer {
@@ -263,3 +277,4 @@ footer {
 .section-title-sm {
   @apply uppercase tracking-widest text-gray-200 text-sm;
 }
+

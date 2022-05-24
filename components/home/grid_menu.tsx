@@ -43,92 +43,42 @@ const GridMenuSection = () => {
     //   }, [quoteRef, targetSection]);
 
     const renderGrid = (): React.ReactNode => (
-        <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
+        <>
+            <div className=" h-screen flex w-full md:w md:mx-auto ">
 
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                <div className="
-    group
-    inline-block pb-4 bg-gradient-to-tr from-purple-600 to-orange-400 text-white overflow-hidden rounded-2xl shadow
-    hover:shadow-md
-    transition
-  ">
-                    <figure className="max-h-64 aspect-square overflow-hidden">
-                        {/* <img
-                            className="w-full h-full object-cover transition group-hover:scale-125"
-                            src="https://images.unsplash.com/photo-1649168916853-8bdb50116941?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0OTQ0MzY5Nw&ixlib=rb-1.2.1&q=80&w=400"
-                        /> */}
-                        <Image
-                            alt="Alpha card"
-                            src={alphacard}
-                            layout="responsive"
-                            width={700}
-                            height={475}
-                        />
-                    </figure>
-                    <div className="p-4">
-                        <h3 className="text-xl font-bold">Card Title</h3>
-                        <p className="font-serif">Lorem ipsum dolor sit amet</p>
+                <div className="md:pl-3 md:pr-0 pt-8 pb-0 md:pb-6 px-2 w-full flex flex-wrap bg-grey-light">
+                    <div className="relative h-auto border-8 border-yellow-300 w-1/2 bg-red-50">
+                        <a className="pin absolute mx-auto">1</a>
+                        <h1 className="text-4xl p-4">This is the true</h1>
+                        <h2 className="text-2xl p-4">38 RON</h2>
                     </div>
-                    <footer className="flex gap-2 px-4">
-                        <button className="text-blue-400 hover:text-red-400">
-                            <i className="fa-solid fa-heart"></i>
-                        </button>
-                        <button className="text-blue-400 hover:text-red-400">
-                            <i className="fa-solid fa-comment"></i>
-                        </button>
-                    </footer>
+                    <div className="relative h-auto border-8 w-1/2 bg-red-100">
+                        <a className="pin absolute mx-auto">2</a>
+                    </div>
+                    <div className="relative h-auto border-8 w-full bg-red-200">
+                        <a className="pin absolute mx-auto">3</a>
+                    </div>
+                    <div className="relative max-h-full border-8 w-1/2 lg:w-1/3 bg-red-300">
+                        <a className="pin absolute mx-auto">4</a>
+                    </div>
+                    <div className="relative h-auto border-8 w-1/2 lg:w-1/3 bg-red-400">
+                        <a className="pin absolute mx-auto">5</a>
+                    </div>
+                    <div className="relative h-auto border-8 w-full lg:w-1/3 bg-red-500">
+                        <a className="pin absolute mx-auto">6</a>
+                    </div>
                 </div>
             </div>
 
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
+        </>
+    );
 
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 lg:my-1 lg:px-1 xl:my-1 xl:px-1 xl:w-1/3">
-                {/* <!-- Column Content --> */}
-            </div>
-
-        </div>
+    const renderGridContent = (): React.ReactNode => (
+        <h1>RENDER GRID CONTENT</h1>
     );
 
     return (
-        <section className="w-full relative select-none"
+        <section className="w-full flex md:items-center py-8 section-container min-h-screen relative mb-24"
             id={MENULINKS[2].ref}
             ref={targetSection}
         >
