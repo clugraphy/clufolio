@@ -32,3 +32,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# palm videos
+/public/palm2.mp4
+/public/palm3.mp4
+/public/palm4.mp4

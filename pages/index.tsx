@@ -18,6 +18,7 @@ import AboutSection from "@/components/home/about";
 import GridMenuSection from "@/components/home/grid_menu";
 import Image from "next/image";
 import FancyMenu from "@/components/home/fancy_menu";
+import VideoBanner from "@/components/home/videobanner";
 
 const DEBOUNCE_TIME = 100;
 
@@ -75,6 +76,7 @@ export default function Home() {
         <main className="flex-col flex">
           {renderBackdrop()}
           <HeroSection />
+          <VideoBanner />
           <FancyMenu />
           <CollaborationSection />
           <GridMenuSection />

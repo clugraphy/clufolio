@@ -70,6 +70,15 @@ const GridMenuSection = () => {
                 </div>
             </div>
 
+            {/* <div className=" h-screen flex w-full md:w md:mx-auto ">
+                <div className="bg-yellow-500 border-4 border-red-600">
+                    <h1 className="text-6xl">This is here</h1>
+                </div>
+                <div className="bg-yellow-800 h-12 border-red-600">
+                    <h1>This is here</h1>
+                </div>
+            </div> */}
+
         </>
     );
 
