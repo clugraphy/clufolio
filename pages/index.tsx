@@ -75,12 +75,11 @@ export default function Home() {
         <Cursor isDesktop={isDesktop} />
         <main className="flex-col flex">
           {renderBackdrop()}
-          <HeroSection />
           <VideoBanner />
+          <HeroSection />
           <FancyMenu />
           <CollaborationSection />
           <GridMenuSection />
-          {/* <TimelineSection isDesktop={isDesktop} /> */}
           <QuoteSection />
           <AboutSection />
           <Footer />

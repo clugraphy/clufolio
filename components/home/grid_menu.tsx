@@ -82,6 +82,17 @@ const GridMenuSection = () => {
         </>
     );
 
+    const newGrid = (): React.ReactNode => (
+        <div className="grid grid-cols-3">
+            <div className="bg-red-500 rounded-lg shadow-xl min-h-[50px]"></div>
+            <div className="bg-indigo-500 rounded-lg shadow-xl min-h-[50px]"></div>
+            <div className="bg-yellow-500 rounded-lg shadow-xl min-h-[50px]"></div>
+            <div className="bg-green-500 rounded-lg shadow-xl min-h-[50px]"></div>
+            <div className="bg-purple-500 rounded-lg shadow-xl min-h-[50px]"></div>
+
+        </div>
+    );
+
     const renderGridContent = (): React.ReactNode => (
         <h1>RENDER GRID CONTENT</h1>
     );
@@ -92,6 +103,7 @@ const GridMenuSection = () => {
             ref={targetSection}
         >
             {renderGrid()}
+            {newGrid()}
         </section>
     );
 };
