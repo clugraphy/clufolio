@@ -2,14 +2,14 @@ import Image from "next/image";
 
 const Header = ({ children }: { children: React.ReactNode }) => {
   return (
-    <nav className="w-full fixed top-0 py-8 select-none z-50 bg-gradient-to-b from-gray-900 to-transparent">
+    <nav className="w-full fixed top-0 py-8 select-none z-50 bg-gradient-to-b from-green-200 to-transparent">
       <div className="flex justify-between section-container">
         <a href="#home" className="link">
           <Image
             src="/bryo.svg"
             alt="Logo - BRYO restaurant"
-            width={48}
-            height={48}
+            width={64}
+            height={64}
           />
         </a>
         <div className="outer-menu relative">

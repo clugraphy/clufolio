@@ -37,3 +37,7 @@ yarn-error.log*
 /public/palm2.mp4
 /public/palm3.mp4
 /public/palm4.mp4
+
+# poze pentru teste
+
+/public/images/

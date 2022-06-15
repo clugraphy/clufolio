@@ -7,11 +7,11 @@ const COLLABORATION_STYLE = {
   SLIDING_TEXT:
     "opacity-20 text-5xl md:text-7xl font-bold whitespace-nowrap transform-gpu",
   SECTION:
-    "w-full relative select-none tall:py-36 py-48 section-container flex flex-col",
+    "w-full relative select-none tall:py-36 py-48 section-container flex flex-col snap-y snap-mandatory",
   TITLE: "mt-6 md:mt-8 font-medium text-4xl md:text-5xl text-center",
 };
 
-const CollaborationSection = () => {
+const GustiSection = () => {
   const quoteRef: MutableRefObject<HTMLDivElement> = useRef(null);
   const targetSection: MutableRefObject<HTMLDivElement> = useRef(null);
 
@@ -61,7 +61,6 @@ const CollaborationSection = () => {
 
   useEffect(() => {
     const textBgAnimation = initTextGradientAnimation(targetSection);
-
     const slidingAnimation = initSlidingTextAnimation(targetSection);
 
     return () => {
@@ -81,7 +80,7 @@ const CollaborationSection = () => {
   const renderTitle = () => (
     <div className="text-black">
       <h1 ref={quoteRef} className={COLLABORATION_STYLE.TITLE}>
-        Iti este <span className="text-strong font-bold text-red-300">foame?</span>
+        Iti este <span className="text-strong font-bold text-red-300">foooooaaaame?</span>
         ?
       </h1>
     </div>
@@ -104,4 +103,4 @@ const CollaborationSection = () => {
   );
 };
 
-export default CollaborationSection;
+export default GustiSection;

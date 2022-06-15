@@ -1,14 +1,15 @@
-import { SOCIAL_LINKS } from "constants";
-import { EMAIL } from "constants";
+// import { SOCIAL_LINKS } from "constants";
+// import { EMAIL } from "constants";
 
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import Button, { ButtonTypes } from "../common/button";
 import Image from "next/image";
-import RenderResult from "next/dist/server/render-result";
+import { gsap } from 'gsap';
+
 
 const VideoBanner = () => {
 
-
+    const textRef = useRef();
     // Tailwind CSS Styles 
     const HERO_STYLES = {
         SECTION:
@@ -22,25 +23,39 @@ const VideoBanner = () => {
     };
 
     // Social links Render
-    const renderSocialLinks = (): React.ReactNode =>
-        Object.keys(SOCIAL_LINKS).map((el: keyof typeof SOCIAL_LINKS) => (
-            <a
-                href={SOCIAL_LINKS[el]}
-                key={el}
-                className={HERO_STYLES.SOCIAL_LINK}
-                rel="noreferrer"
-                target="_blank"
-            >
-                <Image src={`/social/${el}.svg`} alt={el} width={40} height={40} />
-            </a>
-        ));
+    // const renderSocialLinks = (): React.ReactNode =>
+    //     Object.keys(SOCIAL_LINKS).map((el: keyof typeof SOCIAL_LINKS) => (
+    //         <a
+    //             href={SOCIAL_LINKS[el]}
+    //             key={el}
+    //             className={HERO_STYLES.SOCIAL_LINK}
+    //             rel="noreferrer"
+    //             target="_blank"
+    //         >
+    //             <Image src={`/social/${el}.svg`} alt={el} width={40} height={40} />
+    //         </a>
+    //     ));
+
+    useEffect(() => {
+        gsap.to(textRef.current, { rotation: "+360" });
+    }, []);
 
     return (
-        <><div className="flex mx-auto">
-            <div
-                className="absolute z-30 p-48 top-48 text-3xl lg:text-6xl text-gray-300 bg-green-100 bg-opacity-50 rounded-xl"
+        <><div className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+            <video
+                autoPlay
+                loop
+                muted
+                className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
             >
-                BRYO apetitte
+                <source
+                    src="palm_l.mp4"
+                    type="video/mp4"
+                />
+                Your browser does not support the video tag.
+            </video>
+            <div ref={textRef} className="relative z-30 p-24 text-2xl md:text-4xl lg:text-6xl text-black bg-opacity-0 lg:bg-opacity-50 rounded-xl mx-auto items-center justify-center">
+                <h1>BRYO apetitte</h1>
                 <div className="flex seq p-4 z-10 text-white">
                     <Button
                         classes="mr-3"
@@ -54,24 +69,11 @@ const VideoBanner = () => {
                         classes="ml-3"
                         type={ButtonTypes.OUTLINE}
                         name="Let's Talk"
-                        href={`mailto: ${EMAIL}`}
+                        href={`mailto: @clu`}
                     ></Button>
                 </div>
-                {renderSocialLinks()}
+                {/* {renderSocialLinks()} */}
             </div>
-            <video
-                autoPlay
-                loop
-                muted
-                className="relative z-10 h-full w-full "
-            >
-                <source
-                    src="palm_l.mp4"
-                    type="video/mp4"
-                />
-                Your browser does not support the video tag.
-            </video>
-
         </div>
 
         </>

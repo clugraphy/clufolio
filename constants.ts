@@ -5,6 +5,8 @@ export const METADATA = {
   siteUrl: "https://bryo.eatme/",
 };
 
+export const EMAIL = "alexandru.catalin.stroe@gmail.com";
+
 export const MENULINKS = [
   {
     name: "Home",
@@ -33,7 +35,7 @@ export const TYPED_STRINGS = [
   "Food is symbolic of love when words are inadequate",
 ];
 
-export const EMAIL = "alexandru.catalin.stroe@gmail.com";
+
 
 // Social links
 

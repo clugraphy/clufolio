@@ -2,18 +2,18 @@ import styles from "./ProjectTile.module.scss";
 import Image from "next/image";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
-import { IProject } from "../../constants";
 
-const ProjectTile = ({
-  project,
+
+const MenuTile = ({
+  menu,
   classes = "",
   isDesktop,
 }: {
-  project: IProject;
+  menu: IProject;
   classes: string;
   isDesktop: boolean;
 }) => {
-  const projectCard: MutableRefObject<HTMLDivElement> = useRef(null);
+  const menuCard: MutableRefObject<HTMLDivElement> = useRef(null);
   const {
     name,
     tech,
@@ -21,17 +21,17 @@ const ProjectTile = ({
     blurImage,
     description,
     gradient: [stop1, stop2],
-  } = project;
+  } = menu;
 
   useEffect(() => {
-    VanillaTilt.init(projectCard.current, {
+    VanillaTilt.init(menuCard.current, {
       max: 5,
       speed: 400,
       glare: true,
       "max-glare": 0.2,
       gyroscope: false,
     });
-  }, [projectCard]);
+  }, [menuCard]);
 
   const renderTechIcons = (techStack: string[]): React.ReactNode => (
     <div
@@ -107,7 +107,7 @@ const ProjectTile = ({
 
   return (
     <a
-      href={project.url}
+      href={menu.url}
       target="_blank"
       rel="noreferrer"
       className={`link overflow-hidden rounded-3xl ${classes}`}
@@ -118,7 +118,7 @@ const ProjectTile = ({
       }}
     >
       <div
-        ref={projectCard}
+        ref={menuCard}
         className={`
           ${styles.ProjectTile}
            rounded-3xl relative p-6 flex-col flex justify-between max-w-full
@@ -143,4 +143,4 @@ const ProjectTile = ({
   );
 };
 
-export default ProjectTile;
+export default MenuTile;
