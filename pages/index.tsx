@@ -84,7 +84,7 @@ export default function Home() {
           <VideoBanner />
           {/* <BreakSection /> */}
           <GustiSection />
-          <ScrollVibe />
+          {/* <ScrollVibe /> */}
           <SnapSection />
           <GridMenuSection />
           <QuoteSection />

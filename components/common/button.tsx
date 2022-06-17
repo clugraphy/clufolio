@@ -5,11 +5,12 @@ export enum ButtonTypes {
   PRIMARY = "primary",
   OUTLINE = "outline",
   WHITE = "white",
+  SLICK = "slick"
 }
 
 const Button = ({
   type,
-  onClick = () => {},
+  onClick = () => { },
   name,
   href,
   classes = "",
@@ -40,8 +41,10 @@ const Button = ({
     return type === ButtonTypes.PRIMARY
       ? styles.primary
       : type === ButtonTypes.WHITE
-      ? styles.white
-      : styles.outline;
+        ? styles.white
+        : styles.outline
+
+      ;
   }
 };
 

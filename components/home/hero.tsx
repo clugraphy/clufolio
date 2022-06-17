@@ -2,7 +2,7 @@ import { EMAIL, MENULINKS, SOCIAL_LINKS, TYPED_STRINGS } from "../../constants";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Image from "next/image";
-import { gsap, Linear } from "gsap";
+import { gsap, Linear, } from "gsap";
 import Button, { ButtonTypes } from "../common/button";
 import HeroImage from "./hero-image";
 import Rive, { Layout, Fit, Alignment, useRive } from '@rive-app/react-canvas';
@@ -68,15 +68,6 @@ const HeroSection = React.memo(() => {
   });
 
 
-  // Use effect : 
-  useEffect(() => {
-    const typed = initTypeAnimation(typedSpanElement);
-    initRevealAnimation(targetSection);
-    gsap.to(svgRotate, { rotation: "+360", color: "#8c0", duration: 5 });
-    return typed.destroy;
-  }, [typedSpanElement, targetSection]);
-
-
   // Background Render
 
   const renderBackgroundImage = (): React.ReactNode => (
@@ -86,6 +77,15 @@ const HeroSection = React.memo(() => {
       <HeroImage />
     </div>
   );
+
+  // Use effect : 
+  useEffect(() => {
+    const typed = initTypeAnimation(typedSpanElement);
+    initRevealAnimation(targetSection);
+    gsap.to('#svgRotate', { rotation: "+360", color: "#8c0", duration: 5 });
+    return typed.destroy;
+  }, [typedSpanElement, targetSection]);
+
 
 
   // Social links Render

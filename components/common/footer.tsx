@@ -54,13 +54,13 @@ const Footer = () => {
       <Image
         src="/footer-curve.svg"
         alt="Footer"
-        className="w-full"
+        className="relative w-full"
         loading="lazy"
-        height={290}
-        width={1440}
+        height={640}
+        width={1920}
       />
       <div className="h-full w-full">
-        <div className="section-container flex-col flex h-full justify-end z-10 items-center py-12">
+        <div className="section-container flex-col flex h-full justify-end z-10 items-center py-24">
           {renderFooterContent()}
         </div>
       </div>

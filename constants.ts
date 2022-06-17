@@ -17,6 +17,10 @@ export const MENULINKS = [
     ref: "timeline",
   },
   {
+    name: "SnapAttack",
+    ref: "snapAttack"
+  },
+  {
     name:"GridMenu",
     ref: "gridmenu"
   },
