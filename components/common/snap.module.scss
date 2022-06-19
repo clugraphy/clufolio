@@ -1,0 +1,14 @@
+$black1: #000000;
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color:green;
+  top: 30%;
+  left: 50%;
+}
+
+.end {
+  background-color:$black1;
+}

@@ -2,12 +2,10 @@ import { gsap, Linear } from "gsap";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import alphacard from "../../public/projects/alpha.jpg"
 import {
     MENULINKS,
 } from "../../constants";
 import VanillaTilt from "vanilla-tilt";
-import { TweenMax } from "gsap-trial/src/all";
 
 const GridMenuSection = () => {
     const quoteRef: MutableRefObject<HTMLDivElement> = useRef(null);
@@ -73,8 +71,8 @@ const GridMenuSection = () => {
         <>
             <div className="container mx-auto px-4 py-5 ">
                 <h1 className="text-3xl font-bold text-gray-800 mb-5">Meniu</h1>
-                <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div ref={tilt} className="rounded-lg relattive overflow-hidden shadow-lg hover:bg-yellow-400">
+                <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div ref={tilt} className="rounded-lg relattive overflow-hidden shadow-lg transition ease-linear duration-500 hover:bg-yellow-400  ">
                         <Image
                             src="/images/IMG_6139.jpg"
                             alt=""
@@ -91,7 +89,7 @@ const GridMenuSection = () => {
                             </p>
                         </div>
                     </div>
-                    <div ref={tilt2} className="rounded-lg overflow-hidden shadow-lg hover:bg-yellow-400">
+                    <div ref={tilt2} className="rounded-lg overflow-hidden shadow-lg transition ease-linear duration-500 hover:bg-yellow-400">
                         <Image
                             src="/images/IMG_6139.jpg"
                             alt=""
@@ -108,7 +106,7 @@ const GridMenuSection = () => {
                         </div>
 
                     </div>
-                    <div ref={tilt3} className="rounded-lg overflow-hidden shadow-lg hover:bg-yellow-400">
+                    <div ref={tilt3} className="rounded-lg overflow-hidden shadow-lg transition ease-linear duration-500 hover:bg-yellow-400">
                         <Image
                             src="/images/IMG_6139.jpg"
                             alt=""
@@ -125,7 +123,7 @@ const GridMenuSection = () => {
                         </div>
 
                     </div>
-                    <div ref={tilt4} className="rounded-lg overflow-hidden shadow-lg bg-green-300 hover:bg-yellow-400">
+                    <div ref={tilt4} className="rounded-lg overflow-hidden shadow-lg bg-green-300 transition ease-linear duration-500 hover:bg-yellow-400">
                         <Image
                             src="/images/IMG_6139.jpg"
                             layout="responsive"
@@ -142,7 +140,7 @@ const GridMenuSection = () => {
                         </div>
 
                     </div>
-                    <div ref={tilt5} className="rounded-lg overflow-hidden shadow-lg hover:bg-yellow-400">
+                    <div ref={tilt5} className="rounded-lg overflow-hidden shadow-lg ">
 
                         <Image
                             src="/images/IMG_6139.jpg"
@@ -160,7 +158,7 @@ const GridMenuSection = () => {
                         </div>
 
                     </div>
-                    <div ref={tilt6} className="rounded-lg overflow-hidden shadow-lg">
+                    <div ref={tilt6} className="rounded-lg overflow-hidden shadow-lg transition ease-linear duration-500 hover:bg-yellow-400">
                         <Image
                             src="/images/IMG_6139.jpg"
                             layout="responsive"
@@ -177,7 +175,7 @@ const GridMenuSection = () => {
                         </div>
 
                     </div>
-                    <div ref={tilt7} className="rounded-lg overflow-hidden shadow-lg">
+                    <div ref={tilt7} className="rounded-lg overflow-hidden shadow-lg transition ease-linear duration-500 hover:bg-yellow-400">
                         <Image
                             src="/images/IMG_6139.jpg"
                             layout="responsive"
@@ -194,7 +192,7 @@ const GridMenuSection = () => {
                         </div>
 
                     </div>
-                    <div ref={tilt8} className="rounded-lg overflow-hidden shadow-lg">
+                    <div ref={tilt8} className="rounded-lg overflow-hidden shadow-lg transition ease-linear duration-500 hover:bg-yellow-400">
                         <Image
                             className="max-w-full h-auto"
                             src="/images/IMG_6139.jpg"

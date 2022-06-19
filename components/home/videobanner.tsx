@@ -54,8 +54,8 @@ const VideoBanner = () => {
                 />
                 Your browser does not support the video tag.
             </video>
-            <div ref={textRef} className="relative z-30 p-24 text-2xl md:text-4xl lg:text-6xl text-black bg-opacity-0 lg:bg-opacity-50 rounded-xl mx-auto items-center justify-center">
-                <h1>BRYO apetitte</h1>
+            <div className="relative z-30 p-24 text-2xl md:text-4xl lg:text-6xl bg-opacity-0 lg:bg-opacity-50 rounded-xl mx-auto items-center justify-center">
+                <div ref={textRef} className="relative lg:text-8xl items-center justify-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-greeb-800" ><h1>BRYO apetitte</h1></div>
                 <div className="flex seq p-4 z-10 text-white">
                     <Button
                         classes="mr-3"
