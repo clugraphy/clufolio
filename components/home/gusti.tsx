@@ -86,6 +86,9 @@ const GustiSection = () => {
     </div>
   );
 
+
+  //TODO: Play with the design and colors
+
   return (
     <section className={COLLABORATION_STYLE.SECTION} ref={targetSection}>
       {renderSlidingText(
